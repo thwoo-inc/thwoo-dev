@@ -8,7 +8,7 @@ type Props = {
 
 const MediaList = ({ medias }: Props) => {
   return (
-    <div className='grid grid-cols-2 gap-2 md:grid-cols-4'>
+    <div className='grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4'>
       {medias.map((media) => (
         <div key={media.id}>
           <MediaCard key={media.id} media={media} />

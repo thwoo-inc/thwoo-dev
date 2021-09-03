@@ -20,7 +20,7 @@ const MediaCard = ({ media }: Props) => {
     <button className='flex' onClick={toggleModal}>
       <div className='relative flex overflow-hidden'>
         <img
-          className='transform hover:scale-105 transition duration-200'
+          className='rounded transform hover:scale-105 transition duration-200'
           src={media.images[0]}
         />
         {/* <div className='absolute align-bottom z-10 w-full bg-white opacity-80'>

@@ -15,7 +15,7 @@ const MediaModal = ({ media, close }: Props) => {
           <div className='absolute w-full h-full bg-black opacity-80 z-40' />
           <div className='absolute w-full h-full z-50 flex items-center'>
             <div className='p-2 md:w-4/5 lg:w-1/2 mx-auto'>
-              <img className='mb-2' src={media.images[0]} />
+              <img className='mb-2 rounded' src={media.images[0]} />
               <p className='text-gray-300'>{media.caption}</p>
             </div>
           </div>
