@@ -11,7 +11,9 @@ const MediaOneshot = ({ media }: Props) => {
         <img className='rounded' src={media.images[0]} />
       </div>
       <div className='flex-1 md:p-4 text-center'>
-        <p className='lg:text-lg'>{media.caption}</p>
+        <p className='tracking-wider leading-relaxed lg:text-lg'>
+          {media.caption}
+        </p>
       </div>
     </div>
   );

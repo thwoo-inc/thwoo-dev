@@ -18,7 +18,7 @@ export default function TagPage({ slug, medias, tags }: Props) {
 
   return (
     <Layout>
-      <div className='container mx-auto mt-4 mb-12'>
+      <div className='container mx-auto mt-8 mb-12'>
         <section className={sectionStyle}>
           <Menu hasHomeLink={true} tags={tags} currentTagPath={slug} />
         </section>
