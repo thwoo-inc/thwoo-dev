@@ -13,15 +13,15 @@ const Social = () => {
         </p>
       </div>
       <div className='flex-1 flex flex-row p-4'>
-        <div className=''>
+        <a href='https://www.instagram.com/tetsuyanh/' target='_blank'>
           <img
             src='/img/qr_instagram.png'
             alt='InstagramアカウントのQRコード'
           />
-        </div>
-        <div className=''>
+        </a>
+        <a href='https://twitter.com/tetsuyanh' target='_blank'>
           <img src='/img/qr_twitter.png' alt='TwitterアカウントのQRコード' />
-        </div>
+        </a>
       </div>
     </div>
   );
