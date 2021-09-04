@@ -31,18 +31,23 @@ export const getAllTags = (): ITag[] => {
 };
 
 export const getAllMedias = (): Media[] => {
-  return getRawMedias().map((media) => ({
-    id: media.id,
-    tags: media.tags.split(','),
-    caption: media.caption,
-    thumbnail:
-      media.media_type === 'VIDEO' ? media.thumbnail_url : media.media_url,
-    images: media.media_type === 'VIDEO' ? null : [media.media_url],
-    videos: media.media_type === 'VIDEO' ? [media.media_url] : null,
-    permalink: media.permalink,
-    username: media.username,
-    timestamp: media.timestamp,
-  }));
+  return getRawMedias().map((media) => {
+    const contents = [];
+
+    return {
+      id: media.id,
+      tags: media.tags.split(','),
+      caption: media.caption,
+      thumbnail:
+        media.media_type === 'VIDEO' ? media.thumbnail_url : media.media_url,
+      images: media.media_type === 'VIDEO' ? null : [media.media_url],
+      videos: media.media_type === 'VIDEO' ? [media.media_url] : null,
+      contents: contents,
+      permalink: media.permalink,
+      username: media.username,
+      timestamp: media.timestamp,
+    };
+  });
 };
 
 const getRawMedias = (): any => {

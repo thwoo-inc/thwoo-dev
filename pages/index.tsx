@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import MediaList from '../components/MediaList';
 import MediaOneshot from '../components/MediaOneshot';
 import Menu from '../components/Menu';
+import Social from '../components/Social';
 import { getAllMedias, getAllTags } from '../lib/instagram';
 import IMedia from '../types/media';
 import ITag from '../types/tag';
@@ -38,9 +39,9 @@ export default function Home({ allMedias, allTags }: Props) {
           <div>
             <Menu hasHomeLink={false} tags={allTags} currentTagPath='' />
           </div>
-          {/* <Link as='/media' href='/media'>
-            <a>すべて見る</a>
-          </Link> */}
+        </section>
+        <section className={sectionStyle}>
+          <Social />
         </section>
       </div>
     </Layout>
