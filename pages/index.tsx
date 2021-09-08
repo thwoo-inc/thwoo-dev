@@ -60,7 +60,12 @@ export const getStaticProps: GetStaticProps = async () => {
   const allMedias = getAllMedias();
   const allTags = getAllTags();
 
+  const rawProps = {
+    allMedias,
+    allTags,
+  };
+
   return {
-    props: { allMedias, allTags },
+    props: JSON.parse(JSON.stringify(rawProps)),
   };
 };

@@ -9,20 +9,28 @@ type Props = {
 const MediaCard = ({ media }: Props) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
 
+  const openModal = () => {
+    if (!isOpenModal) {
+      setIsOpenModal(true);
+    }
+  };
+
   const toggleModal = (e) => {
-    console.log('2');
     setIsOpenModal(!isOpenModal);
   };
 
   const shortDescription = media.caption.substr(0, 22);
 
   return (
-    <button className='flex' onClick={toggleModal}>
+    <button className='flex' onClick={openModal}>
       <div className='relative flex overflow-hidden'>
-        <img
-          className='rounded transform hover:scale-105 transition duration-200'
-          src={media.images[0]}
-        />
+        {media.contents && media.contents[0].type == 'image' && (
+          <img
+            className='rounded transform hover:scale-105 transition duration-200'
+            src={media.contents[0].url}
+          />
+        )}
+
         {/* <div className='absolute align-bottom z-10 w-full bg-white opacity-80'>
           <p className='p-1'>{shortDescription}</p>
         </div> */}

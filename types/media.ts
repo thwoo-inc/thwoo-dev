@@ -5,7 +5,7 @@ export default interface IMedia {
   tags: string[];
   type: string;
   thumbnail: string;
-  images: string[];
+  // images: string[];
   contents: IContent[];
   videos: string[];
   permalink: string;
