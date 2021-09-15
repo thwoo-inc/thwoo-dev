@@ -64,7 +64,7 @@ const MediaModal = ({ media, close }: Props) => {
               {media.contents && media.contents[index].type == 'image' && (
                 <img className='mb-2 rounded' src={media.contents[index].url} />
               )}
-              {media.contents && media.contents[index].type == 'video' && (
+              {/* {media.contents && media.contents[index].type == 'video' && (
                 <video
                   className='mb-2 rounded'
                   src={media.contents[index].url}
@@ -74,7 +74,7 @@ const MediaModal = ({ media, close }: Props) => {
                     動画を再生するには、videoタグをサポートしたブラウザが必要です。
                   </p>
                 </video>
-              )}
+              )} */}
               <p className='text-gray-300'>{media.caption}</p>
               <div>
                 {buttons
