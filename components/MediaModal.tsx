@@ -56,13 +56,13 @@ const MediaModal = ({ media, close }: Props) => {
 
   return (
     <Portal>
-      <div className='fixed top-0 bottom-0 left-0 right-0 z-30'>
-        <div className=' w-full h-full '>
-          <div className='absolute w-full h-full bg-black opacity-80 z-10' />
-          <div className='absolute w-full h-full z-20 flex items-center'>
-            <div className='p-2 md:w-4/5 lg:w-1/2 mx-auto'>
+      <div className="fixed top-0 bottom-0 left-0 right-0 z-30">
+        <div className=" w-full h-full ">
+          <div className="absolute w-full h-full bg-black opacity-80 z-10" />
+          <div className="absolute w-full h-full z-20 flex items-center">
+            <div className="p-2 md:w-4/5 lg:w-1/2 mx-auto">
               {media.contents && media.contents[index].type == 'image' && (
-                <img className='mb-2 rounded' src={media.contents[index].url} />
+                <img className="mb-2 rounded" src={media.contents[index].url} />
               )}
               {/* {media.contents && media.contents[index].type == 'video' && (
                 <video
@@ -75,25 +75,26 @@ const MediaModal = ({ media, close }: Props) => {
                   </p>
                 </video>
               )} */}
-              <p className='text-gray-300'>{media.caption}</p>
+              <p className="text-gray-300">{media.caption}</p>
               <div>
                 {buttons
                   .filter((button) => button.isVisible())
-                  .map((button) => (
+                  .map((button, idx) => (
                     <div
+                      key={idx}
                       className={`absolute bg-gray-500 opacity-50 rounded-full cursor-pointer bottom-8 w-12 h-12 z-30 -mt-7 ${button.sideStyle}`}
                       onClick={button.click}
                     >
                       <svg
-                        width='32px'
-                        height='32px'
-                        className='absolute left-2 top-2'
-                        viewBox='0 0 24 24'
-                        fill='none'
-                        stroke='#000000'
-                        strokeWidth='2'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
+                        width="32px"
+                        height="32px"
+                        className="absolute left-2 top-2"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#000000"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       >
                         <path d={button.svgPath}></path>
                       </svg>
